@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Simplified Gmail multi‑color "M" mark -->
+  <path d="M2 6.5v11" stroke="#4285F4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M2 6.5L12 14.5L22 6.5" stroke="#EA4335" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M12 14.5L22 6.5" stroke="#FBBC05" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 6.5v11" stroke="#34A853" stroke-width="4" stroke-linecap="round"/>
+</svg>
+

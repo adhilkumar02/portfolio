@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#DC2626" />
+    <title>Adhil Kumar — AI & Robotics Enthusiast</title>
+    <meta name="description" content="Portfolio of Adhil Kumar — AI & Robotics enthusiast. Projects in robotics, ML, and intelligent systems." />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@2.1.1/src/css/icons.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/avatar.svg" type="image/svg+xml" />
+    <meta name="color-scheme" content="light dark" />
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-inner container">
+            <a href="#home" class="brand">
+                <span class="logo-dot"></span>
+                <span>Adhil<span class="accent">Kumar</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" aria-label="Toggle theme" class="icon-btn" title="Toggle theme">
+                    <i class="ph ph-moon"></i>
+                </button>
+                <button id="menuToggle" aria-label="Menu" class="icon-btn hide-desktop" title="Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="section hero wix-hero">
+        <div class="hero-bg" aria-hidden="true">
+            <!-- Animated SVG circuit lines -->
+            <svg class="circuit" viewBox="0 0 800 600" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.1"/>
+                        <stop offset="50%" stop-color="var(--accent)" stop-opacity="0.6"/>
+                        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+                <g stroke="url(#glow)" stroke-width="2" fill="none" stroke-linecap="round">
+                    <path class="line" d="M0,100 C200,120 200,20 400,40 S600,60 800,40"/>
+                    <path class="line" d="M0,240 C220,220 200,320 420,300 S620,280 800,300"/>
+                    <path class="line" d="M0,420 C200,440 200,520 400,540 S600,560 800,540"/>
+                </g>
+            </svg>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="display">Adhil Kumar</h1>
+                <p class="kicker">AI & Robotics Enthusiast</p>
+                <p class="subtext">I design intelligent systems that bridge the gap between code and creativity.</p>
+                <div class="cta">
+                    <a href="#projects" class="btn btn-primary"><i class="ph ph-rocket-launch"></i> View Projects</a>
+                    <a href="assets/Adhil_Kumar_Resume.pdf" class="btn btn-ghost" download>
+                        <i class="ph ph-download-simple"></i> Download Resume
+                    </a>
+                </div>
+                <div class="socials">
+                    <a href="mailto:aadhilkumar989@gmail.com" aria-label="Email" class="icon-link"><img src="assets/gmail.svg" alt="Gmail" class="icon-img" width="22" height="22" /></a>
+                    <a href="https://linkedin.com/in/adhilkumar" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="icon-link"><img src="assets/linkedin.svg" alt="LinkedIn" class="icon-img" width="22" height="22" /></a>
+                    <a href="https://github.com/adhilkumar02" target="_blank" rel="noreferrer" aria-label="GitHub" class="icon-link"><img src="assets/github.svg" alt="GitHub" class="icon-img" width="22" height="22" /></a>
+                </div>
+            </div>
+            <div class="hero-visual" data-parallax data-speed="0.25">
+                <img src="assets/avatar.svg" alt="Portrait of Adhil Kumar" class="avatar" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-card card">
+                <h2>About Me</h2>
+                <p>
+                    I'm a passionate AI and Robotics enthusiast with a strong foundation in building
+                    intelligent, real‑world systems. I enjoy working at the intersection of algorithms and
+                    hardware — from perception and control to deploying end‑to‑end applications.
+                </p>
+                <p>
+                    My core skills include <strong>ROS2</strong>,<strong>Machine Learning</strong>,<strong>Python</strong>, <strong>C++</strong>, and
+                    <strong>Embedded C</strong>, along with experience in frameworks like <strong>Flask</strong>,
+                    <strong>Pandas</strong>, and <strong>Streamlit</strong>. I love solving tough problems and
+                    designing clean, reliable solutions.
+                </p>
+                <ul class="tags">
+                    <li>ROS2</li>
+                    <li>Machine Learning</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Embedded C</li>
+                    <li>Flask</li>
+                    <li>Pandas</li>
+                    <li>Numpy</li>
+                    <li>Streamlit</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <header class="section-head"><h2 class="section-title">Projects</h2><p class="section-sub">Selected work</p></header>
+            <div class="grid projects-grid">
+                <article class="project card" data-parallax data-speed="0.1">
+                    <div class="thumb" aria-hidden="true"></div>
+                    <div class="project-icon"><i class="ph ph-fire-simple"></i></div>
+                    <h3>Fire Fighting Robot</h3>
+                    <p>Autonomous robot for flame detection and extinguishing with onboard sensors and control.</p>
+                    <ul class="tech">
+                        <li>ROS2</li><li>C++</li><li>Embedded C</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-small btn-ghost" target="_blank" rel="noreferrer">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+                <article class="project card" data-parallax data-speed="0.1">
+                    <div class="thumb" aria-hidden="true"></div>
+                    <div class="project-icon"><i class="ph ph-car"></i></div>
+                    <h3>Car Recommendation System</h3>
+                    <p>Flask‑based intelligent car selector using user preferences and data‑driven scoring.</p>
+                    <ul class="tech">
+                        <li>Python</li><li>Flask</li><li>Pandas</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-small btn-ghost" target="_blank" rel="noreferrer">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+                <article class="project card" data-parallax data-speed="0.1">
+                    <div class="thumb" aria-hidden="true"></div>
+                    <div class="project-icon"><i class="ph ph-stethoscope"></i></div>
+                    <h3>Doctor Appointment System</h3>
+                    <p>Streamlit‑based smart booking tool with simple, guided UX and persistence.</p>
+                    <ul class="tech">
+                        <li>Python</li><li>Streamlit</li><li>Pandas</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-small btn-ghost" target="_blank" rel="noreferrer">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <header class="section-head"><h2 class="section-title">Skills</h2><p class="section-sub">Core competencies</p></header>
+            <div class="skills-grid">
+                <div class="skill-icon-card">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- ROS2 Official Turtle Logo -->
+                            <!-- Turtle Shell - Hexagonal Pattern -->
+                            <ellipse cx="50" cy="58" rx="32" ry="28" fill="currentColor" opacity="0.95"/>
+                            
+                            <!-- Hexagonal shell segments -->
+                            <path d="M 50 35 L 60 40 L 60 50 L 50 55 L 40 50 L 40 40 Z" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+                            <path d="M 50 40 L 58 44 L 58 52 L 50 56 L 42 52 L 42 44 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                            
+                            <!-- Shell center hexagon -->
+                            <path d="M 50 45 L 55 48 L 55 53 L 50 56 L 45 53 L 45 48 Z" fill="currentColor" opacity="0.3"/>
+                            
+                            <!-- Shell segments (left and right) -->
+                            <path d="M 30 50 L 35 45 L 40 48 L 40 58 L 35 61 L 30 58 Z" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+                            <path d="M 70 50 L 65 45 L 60 48 L 60 58 L 65 61 L 70 58 Z" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+                            
+                            <!-- Shell segments (top and bottom) -->
+                            <path d="M 50 30 L 45 35 L 48 40 L 58 40 L 61 35 L 56 30 Z" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+                            <path d="M 50 75 L 45 70 L 48 65 L 58 65 L 61 70 L 56 75 Z" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+                            
+                            <!-- Turtle Head -->
+                            <ellipse cx="50" cy="22" rx="10" ry="8" fill="currentColor"/>
+                            <circle cx="47" cy="21" r="1.8" fill="var(--bg)"/>
+                            <circle cx="53" cy="21" r="1.8" fill="var(--bg)"/>
+                            <ellipse cx="50" cy="23" rx="2" ry="1" fill="var(--bg)" opacity="0.3"/>
+                            
+                            <!-- Turtle Legs (more realistic) -->
+                            <ellipse cx="22" cy="62" rx="5" ry="7" fill="currentColor" opacity="0.85"/>
+                            <ellipse cx="78" cy="62" rx="5" ry="7" fill="currentColor" opacity="0.85"/>
+                            <ellipse cx="22" cy="78" rx="5" ry="7" fill="currentColor" opacity="0.85"/>
+                            <ellipse cx="78" cy="78" rx="5" ry="7" fill="currentColor" opacity="0.85"/>
+                            
+                            <!-- Tail -->
+                            <ellipse cx="50" cy="88" rx="4" ry="6" fill="currentColor" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <span class="skill-name">ROS2</span>
+                </div>
+                <div class="skill-icon-card">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Neural Network Layers -->
+                            <!-- Input Layer -->
+                            <circle cx="20" cy="25" r="5" fill="currentColor"/>
+                            <circle cx="20" cy="40" r="5" fill="currentColor"/>
+                            <circle cx="20" cy="55" r="5" fill="currentColor"/>
+                            <circle cx="20" cy="70" r="5" fill="currentColor"/>
+                            <!-- Hidden Layer 1 -->
+                            <circle cx="45" cy="20" r="5" fill="currentColor"/>
+                            <circle cx="45" cy="35" r="5" fill="currentColor"/>
+                            <circle cx="45" cy="50" r="5" fill="currentColor"/>
+                            <circle cx="45" cy="65" r="5" fill="currentColor"/>
+                            <circle cx="45" cy="80" r="5" fill="currentColor"/>
+                            <!-- Hidden Layer 2 -->
+                            <circle cx="70" cy="30" r="5" fill="currentColor"/>
+                            <circle cx="70" cy="45" r="5" fill="currentColor"/>
+                            <circle cx="70" cy="60" r="5" fill="currentColor"/>
+                            <circle cx="70" cy="75" r="5" fill="currentColor"/>
+                            <!-- Output Layer -->
+                            <circle cx="90" cy="40" r="5" fill="currentColor"/>
+                            <circle cx="90" cy="60" r="5" fill="currentColor"/>
+                            <!-- Connections with varying opacity for depth -->
+                            <line x1="25" y1="25" x2="40" y2="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="25" x2="40" y2="35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="40" x2="40" y2="35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="40" x2="40" y2="50" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="55" x2="40" y2="50" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="55" x2="40" y2="65" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="70" x2="40" y2="65" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="25" y1="70" x2="40" y2="80" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            <line x1="50" y1="20" x2="65" y2="30" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="35" x2="65" y2="30" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="35" x2="65" y2="45" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="50" x2="65" y2="45" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="50" x2="65" y2="60" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="65" x2="65" y2="60" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="65" x2="65" y2="75" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="50" y1="80" x2="65" y2="75" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                            <line x1="75" y1="30" x2="85" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="75" y1="45" x2="85" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="75" y1="45" x2="85" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="75" y1="60" x2="85" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <line x1="75" y1="75" x2="85" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <span class="skill-name">Machine Learning</span>
+                </div>
+                <div class="skill-icon-card">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Official Python Logo - Two Intertwined Snakes -->
+                            
+                            <!-- Left Snake (Blue) - More realistic curves -->
+                            <path d="M 28 12 C 18 12, 10 20, 10 30 L 10 40 C 10 46, 15 50, 21 50 L 26 50 C 31 50, 35 54, 35 59 L 35 66 C 35 72, 40 75, 46 75 C 52 75, 56 72, 56 66 L 56 56" 
+                                  stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <!-- Left snake head -->
+                            <ellipse cx="21" cy="30" rx="6" ry="5" fill="var(--bg)"/>
+                            <ellipse cx="21" cy="30" rx="5.5" ry="4.5" fill="currentColor" opacity="0.1"/>
+                            <circle cx="19" cy="29" r="2.2" fill="var(--bg)"/>
+                            <circle cx="19" cy="29" r="1.5" fill="currentColor"/>
+                            <circle cx="23" cy="29" r="2.2" fill="var(--bg)"/>
+                            <circle cx="23" cy="29" r="1.5" fill="currentColor"/>
+                            
+                            <!-- Left snake body scales -->
+                            <ellipse cx="18" cy="42" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            <ellipse cx="22" cy="48" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            <ellipse cx="26" cy="54" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            <ellipse cx="30" cy="60" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            
+                            <!-- Right Snake (Yellow) - More realistic curves -->
+                            <path d="M 72 88 C 82 88, 90 80, 90 70 L 90 60 C 90 54, 85 50, 79 50 L 74 50 C 69 50, 65 46, 65 41 L 65 34 C 65 28, 60 25, 54 25 C 48 25, 44 28, 44 34 L 44 44" 
+                                  stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <!-- Right snake head -->
+                            <ellipse cx="79" cy="70" rx="6" ry="5" fill="var(--bg)"/>
+                            <ellipse cx="79" cy="70" rx="5.5" ry="4.5" fill="currentColor" opacity="0.1"/>
+                            <circle cx="77" cy="69" r="2.2" fill="var(--bg)"/>
+                            <circle cx="77" cy="69" r="1.5" fill="currentColor"/>
+                            <circle cx="81" cy="69" r="2.2" fill="var(--bg)"/>
+                            <circle cx="81" cy="69" r="1.5" fill="currentColor"/>
+                            
+                            <!-- Right snake body scales -->
+                            <ellipse cx="82" cy="58" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            <ellipse cx="78" cy="52" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            <ellipse cx="74" cy="46" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            <ellipse cx="70" cy="40" rx="2.5" ry="4" fill="currentColor" opacity="0.25"/>
+                            
+                            <!-- Intertwining detail where snakes cross -->
+                            <ellipse cx="45" cy="50" rx="3" ry="5" fill="currentColor" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-icon-card">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- C++ Logo -->
+                            <!-- Letter C -->
+                            <path d="M 25 25 Q 20 25, 20 30 L 20 70 Q 20 75, 25 75 L 45 75 Q 50 75, 50 70 L 50 65 Q 50 60, 45 60 L 30 60 L 30 40 L 45 40 Q 50 40, 50 35 L 50 30 Q 50 25, 45 25 Z" 
+                                  fill="currentColor"/>
+                            
+                            <!-- Plus signs -->
+                            <g transform="translate(60, 50)">
+                                <!-- First Plus -->
+                                <rect x="-3" y="-12" width="6" height="24" rx="1" fill="currentColor"/>
+                                <rect x="-12" y="-3" width="24" height="6" rx="1" fill="currentColor"/>
+                            </g>
+                            <g transform="translate(75, 50)">
+                                <!-- Second Plus -->
+                                <rect x="-3" y="-12" width="6" height="24" rx="1" fill="currentColor"/>
+                                <rect x="-12" y="-3" width="24" height="6" rx="1" fill="currentColor"/>
+                            </g>
+                            
+                            <!-- C++ styling details -->
+                            <path d="M 30 35 L 40 35 M 30 50 L 40 50 M 30 65 L 40 65" 
+                                  stroke="currentColor" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="skill-name">C++</span>
+                </div>
+                <div class="skill-icon-card">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- PCB Board -->
+                            <rect x="8" y="8" width="84" height="84" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect x="12" y="12" width="76" height="76" rx="2" fill="currentColor" opacity="0.1"/>
+                            
+                            <!-- Integrated Circuits -->
+                            <rect x="18" y="18" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="18" y="35" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="18" y="52" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="18" y="69" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            
+                            <rect x="42" y="18" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="42" y="35" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="42" y="52" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="42" y="69" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            
+                            <rect x="64" y="18" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="64" y="35" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="64" y="52" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            <rect x="64" y="69" width="18" height="12" rx="1.5" fill="currentColor"/>
+                            
+                            <!-- Pins on ICs -->
+                            <line x1="18" y1="24" x2="15" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="18" y1="30" x2="15" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="36" y1="24" x2="39" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="36" y1="30" x2="39" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <!-- Circuit Traces -->
+                            <path d="M 40 24 L 42 24 M 40 30 L 42 30 M 40 41 L 42 41 M 40 47 L 42 47" 
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M 64 24 L 66 24 M 64 30 L 66 30 M 64 41 L 66 41 M 64 47 L 66 47" 
+                                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <!-- Vias (connection points) -->
+                            <circle cx="50" cy="27" r="1.5" fill="currentColor"/>
+                            <circle cx="50" cy="41" r="1.5" fill="currentColor"/>
+                            <circle cx="50" cy="55" r="1.5" fill="currentColor"/>
+                            <circle cx="50" cy="69" r="1.5" fill="currentColor"/>
+                            
+                            <!-- Resistors/Capacitors -->
+                            <rect x="25" y="85" width="12" height="3" rx="1" fill="currentColor"/>
+                            <rect x="45" y="85" width="12" height="3" rx="1" fill="currentColor"/>
+                            <rect x="65" y="85" width="12" height="3" rx="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="skill-name">Embedded System</span>
+                </div>
+            </div>
+            <div class="tools">
+                <span title="Flask" class="tool"><i class="ph ph-flask"></i> Flask</span>
+                <span title="Pandas" class="tool"><i class="ph ph-database"></i> Pandas</span>
+                <span title="Streamlit" class="tool"><i class="ph ph-broadcast"></i> Streamlit</span>
+                <span title="Numpy" class="tool"><i class="ph ph-chart-line"></i> Numpy</span>
+                <span title="Scikit-learn" class="tool"><i class="ph ph-chart-line"></i> Scikit-learn</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+        <div class="container">
+            <header class="section-head"><h2 class="section-title">Education</h2><p class="section-sub">Academic background</p></header>
+            <div class="timeline">
+                <div class="edu card">
+                    <h3>Diploma in AI and Robotics</h3>
+                    <p>I-Hub School of Learning, Kochi</p>
+                </div>
+                <div class="edu card">
+                    <h3>Higher Secondary in Computer Science</h3>
+                    <p>Completed with strong focus on programming and systems fundamentals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <header class="section-head"><h2 class="section-title">Contact</h2><p class="section-sub">Let's connect</p></header>
+            <div class="contact-content">
+                <div class="card contact-info-card">
+                    <h3>Get in Touch</h3>
+                    <p class="contact-description">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
+                        Feel free to reach out through any of the channels below.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><img src="assets/gmail.svg" alt="Email" width="24" height="24" style="filter: brightness(0) invert(1);" /></div>
+                            <div class="detail-content">
+                                <h4>Email</h4>
+                                <a href="mailto:aadhilkumar989@gmail.com" class="detail-link">aadhilkumar989@gmail.com</a>
+                                <p class="detail-note">I typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><img src="assets/location.png" alt="Location" width="24" height="24" style="filter: brightness(0) invert(1);" /></div>
+                            <div class="detail-content">
+                                <h4>Location</h4>
+                                <p class="detail-text">Kochi, Kerala, India</p>
+                                <p class="detail-note">Open to remote opportunities</p>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div class="social-links-section">
+                        <h4>Connect on Social Media</h4>
+                        <div class="contact-icons">
+                            <a class="contact-icon" href="mailto:aadhilkumar989@gmail.com" aria-label="Email Adhil" title="Send an email">
+                                <span class="icon-wrap"><img src="assets/gmail.svg" alt="Gmail" class="icon-img" width="32" height="32" /></span>
+                                <span class="label">Email</span>
+                            </a>
+                            <a class="contact-icon" href="https://linkedin.com/in/adhilkumar" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" title="Connect on LinkedIn">
+                                <span class="icon-wrap"><img src="assets/linkedin.svg" alt="LinkedIn" class="icon-img" width="32" height="32" /></span>
+                                <span class="label">LinkedIn</span>
+                            </a>
+                            <a class="contact-icon" href="https://github.com/adhilkumar02" target="_blank" rel="noreferrer" aria-label="GitHub Profile" title="View my GitHub">
+                                <span class="icon-wrap"><img src="assets/github.svg" alt="GitHub" class="icon-img" width="32" height="32" /></span>
+                                <span class="label">GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="card contact-form" id="contactForm">
+                    <h3>Send a Message</h3>
+                    <p class="form-description">Have a project in mind or just want to chat? Drop me a message and I'll get back to you as soon as possible.</p>
+                    <div class="field">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input id="name" name="name" type="text" placeholder="Your full name" required />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input id="email" name="email" type="email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="field">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="What's this about?" />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, idea, or just say hello..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="ph ph-paper-plane-tilt"></i> Send Message</button>
+                    <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> Adhil Kumar. Built with passion for AI & Robotics.</p>
+        </div>
+    </footer>
+
+    <!-- JS: GSAP & App -->
+    <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
