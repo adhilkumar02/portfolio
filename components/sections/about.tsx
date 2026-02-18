@@ -6,8 +6,7 @@ export function About() {
     const [isHovered, setIsHovered] = useState(false)
 
     const skills = [
-        "ROS2", "Machine Learning", "Python", "C++", "Embedded C",
-        "Flask", "Pandas", "Numpy", "Streamlit"
+        "ROS2", "Computer Vision", "Python", "C++", "Embedded Systems", "Deep Learning", "ESP32/Arduino", "Fusion 360"
     ]
 
     return (
@@ -35,10 +34,12 @@ export function About() {
 
                         <div className="space-y-4 text-neutral-300 text-sm md:text-lg leading-relaxed">
                             <p>
-                                I&apos;m a passionate <span className="text-white font-semibold">AI and Robotics enthusiast</span> with a strong foundation in building intelligent, real-world systems. I enjoy working at the intersection of algorithms and hardware — from perception and control to deploying end-to-end applications.
+                                I&apos;m an engineer at the intersection of <span className="text-white font-semibold"> intelligent systems and hardware</span> — building things that sense, think, and move in the real world. From autonomous robots to edge AI pipelines, I care about making technology that actually works, not just in theory.
+
+
                             </p>
                             <p>
-                                My core skills include <span className="text-white font-semibold">ROS2, Machine Learning, Python, C++,</span> and <span className="text-white font-semibold">Embedded C</span>, along with experience in frameworks like <span className="text-white font-semibold">Flask, Pandas,</span> and <span className="text-white font-semibold">Streamlit</span>. I love solving tough problems and designing clean, reliable solutions.
+                                My toolkit spans <span className="text-white font-semibold">ROS2,Computer Vision, Machine Learning, Python, C++,</span> and <span className="text-white font-semibold">Embedded Systems</span>,  with hands-on experience deploying models on embedded hardware like ESP32 and Arduino.
                             </p>
                         </div>
 

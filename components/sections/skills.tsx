@@ -27,7 +27,26 @@ export function Skills() {
             )
         },
         {
-            name: "Machine Learning",
+            name: "Computer Vision",
+            icon: (
+                <svg className="w-14 h-14" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    {/* Eye */}
+                    <path d="M4 24C4 24 10 12 24 12C38 12 44 24 44 24C44 24 38 36 24 36C10 36 4 24 4 24Z" strokeWidth="2" />
+                    <circle cx="24" cy="24" r="6" strokeWidth="2" />
+                    {/* Bounding Box / Focus corners */}
+                    <path d="M 8 8 L 16 8" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 8 8 L 8 16" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 40 8 L 32 8" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 40 8 L 40 16" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 8 40 L 16 40" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 8 40 L 8 32" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 40 40 L 32 40" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 40 40 L 40 32" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+            )
+        },
+        {
+            name: "Deep Learning",
             icon: (
                 <svg className="w-14 h-14" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
                     {/* Neural network nodes */}
@@ -117,7 +136,7 @@ export function Skills() {
     ]
 
     const additionalSkills = [
-        "Flask", "Pandas", "Streamlit", "Numpy", "Scikit-learn"
+        "OpenCV", "Model Training & Evaluation", "Gazebo", "ESP32 / Arduino", "Rviz", "Fusion 360"
     ]
 
     return (
