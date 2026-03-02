@@ -5,15 +5,42 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { motion, AnimatePresence } from "framer-motion"
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = React.useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
+    const [activeSection, setActiveSection] = React.useState("Home")
+    const [hoveredItem, setHoveredItem] = React.useState<string | null>(null)
 
     React.useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50)
+
+            // Update active section based on scroll position
+            const sections = [
+                { name: "Home", id: "" },
+                { name: "About", id: "about" },
+                { name: "Projects", id: "projects" },
+                { name: "Skills", id: "skills" },
+                { name: "Education", id: "education" },
+                { name: "Contact", id: "contact" },
+            ]
+
+            let current = "Home"
+            for (const section of sections) {
+                if (!section.id) continue
+                const el = document.getElementById(section.id)
+                if (el) {
+                    const rect = el.getBoundingClientRect()
+                    if (rect.top <= 100) {
+                        current = section.name
+                    }
+                }
+            }
+            setActiveSection(current)
         }
+
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
@@ -39,6 +66,8 @@ export function Navbar() {
         { name: "Contact", href: "#contact" },
     ]
 
+    const displayItem = hoveredItem ?? activeSection
+
     return (
         <header
             className={cn(
@@ -55,14 +84,30 @@ export function Navbar() {
                     </span>
                 </Link>
 
-                {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-8">
+                {/* Desktop Navigation — Pill Nav */}
+                <nav
+                    className="hidden md:flex items-center gap-1 relative bg-neutral-900/60 backdrop-blur-sm border border-white/10 rounded-full px-2 py-1.5"
+                    onMouseLeave={() => setHoveredItem(null)}
+                >
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+                            className="relative px-4 py-1.5 text-sm font-medium rounded-full z-10 transition-colors duration-200"
+                            style={{
+                                color: displayItem === link.name ? "#fff" : "#a3a3a3",
+                            }}
+                            onMouseEnter={() => setHoveredItem(link.name)}
+                            onClick={() => setActiveSection(link.name)}
                         >
+                            {displayItem === link.name && (
+                                <motion.span
+                                    layoutId="pill"
+                                    className="absolute inset-0 rounded-full bg-red-600/90"
+                                    style={{ zIndex: -1 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                                />
+                            )}
                             {link.name}
                         </Link>
                     ))}
@@ -84,29 +129,43 @@ export function Navbar() {
             </div>
 
             {/* Mobile Navigation Overlay */}
-            <div
-                className={cn(
-                    "fixed inset-0 bg-black/95 backdrop-blur-xl z-40 md:hidden transition-all duration-300 flex items-center justify-center",
-                    isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        key="mobile-menu"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 md:hidden flex items-center justify-center"
+                    >
+                        <nav className="flex flex-col items-center space-y-8">
+                            {navLinks.map((link, index) => (
+                                <motion.div
+                                    key={link.name}
+                                    initial={{ y: 20, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{ delay: index * 0.05, duration: 0.3 }}
+                                >
+                                    <Link
+                                        href={link.href}
+                                        className={cn(
+                                            "text-3xl font-bold transition-all duration-300",
+                                            activeSection === link.name ? "text-red-500" : "text-neutral-400 hover:text-white"
+                                        )}
+                                        onClick={() => {
+                                            setActiveSection(link.name)
+                                            setIsMobileMenuOpen(false)
+                                        }}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </nav>
+                    </motion.div>
                 )}
-            >
-                <nav className="flex flex-col items-center space-y-8">
-                    {navLinks.map((link, index) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className={cn(
-                                "text-3xl font-bold text-neutral-400 hover:text-white transition-all duration-300 transform",
-                                isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                            )}
-                            style={{ transitionDelay: `${index * 50}ms` }}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                </nav>
-            </div>
+            </AnimatePresence>
         </header>
     )
 }

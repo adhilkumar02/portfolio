@@ -39,7 +39,7 @@ export function About() {
 
                             </p>
                             <p>
-                                My toolkit spans <span className="text-white font-semibold">ROS2,Computer Vision, Machine Learning, Python, C++,</span> and <span className="text-white font-semibold">Embedded Systems</span>,  with hands-on experience deploying models on embedded hardware like ESP32 and Arduino.
+                                My toolkit spans <span className="text-white font-semibold">ROS2,Computer Vision, Machine Learning, Python, C++,</span> and <span className="text-white font-semibold">Embedded Systems</span>,  with hands-on experience deploying models on embedded hardware like <span className="text-white font-semibold">ESP32 and Arduino</span>.
                             </p>
                         </div>
 

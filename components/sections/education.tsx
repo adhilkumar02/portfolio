@@ -17,12 +17,6 @@ export function Education() {
                         <h3 className="text-xl md:text-2xl font-bold text-white">Diploma in AI and Robotics</h3>
                         <p className="text-neutral-400 text-base md:text-lg mt-1">I-Hub School of Learning, Kochi</p>
                     </div>
-
-                    <div className="relative">
-                        <div className="absolute -left-[33px] md:-left-[57px] top-1.5 md:top-1 w-3.5 h-3.5 md:w-5 md:h-5 rounded-full bg-neutral-600 border-2 md:border-4 border-neutral-950"></div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white">Higher Secondary in Computer Science</h3>
-                        <p className="text-neutral-400 text-base md:text-lg mt-1">Completed with strong focus on programming and systems fundamentals.</p>
-                    </div>
                 </div>
             </div>
         </section>

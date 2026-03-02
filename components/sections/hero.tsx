@@ -15,6 +15,7 @@ export function Hero() {
                 {/* Left side - Text content */}
                 <div className="flex flex-col items-start justify-center space-y-6 md:space-y-4 md:w-[50%] pt-10 md:pt-0 z-20">
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
+                        <span className="block text-2xl md:text-3xl lg:text-4xl font-medium text-neutral-400 mb-2">Hi, I&apos;m</span>
                         Adhil Kumar
                     </h1>
                     <h2 className="text-base md:text-xl font-normal text-neutral-400 uppercase tracking-wider">

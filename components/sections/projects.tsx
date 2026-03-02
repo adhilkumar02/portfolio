@@ -6,6 +6,18 @@ import Link from "next/link"
 export function Projects() {
     const projects = [
         {
+            title: "Helmet Strap Detection",
+            description: "Real-time YOLOv8 demo that verifies helmet usage and chin-strap fastening from a live webcam feed.",
+            tech: ["Python", "YOLOv8", "OpenCV"],
+            link: "https://github.com/adhilkumar02/Helmet_strap_detection"
+        },
+        {
+            title: "Agentic Research Assistant",
+            description: "Local-first PDF research tool with a multi-agent FastAPI backend — ingests PDFs, segments & embeds sections via SentenceTransformers + FAISS, and enables grounded Q&A and section-level summaries through a React UI.",
+            tech: ["Python", "FastAPI", "FAISS", "React", "LLM"],
+            link: "https://github.com/adhilkumar02/Agentic-Research-Assistant"
+        },
+        {
             title: "ESP32-CAM-Wifi-Fire-Fighting-RC-Robot",
             description: "Autonomous robot for flame detection and extinguishing with onboard sensors and control.",
             tech: ["C++", "Embedded C"],
