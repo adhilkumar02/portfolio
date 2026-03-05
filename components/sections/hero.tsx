@@ -62,7 +62,7 @@ export function Hero() {
 
                         {/* ── Secondary: text-link with underline wipe ── */}
                         <Link
-                            href="/cv.pdf"
+                            href="/Adhilkumar.pdf"
                             target="_blank"
                             className="group relative inline-flex items-center gap-2 text-neutral-300 hover:text-white font-semibold text-sm uppercase tracking-[0.12em] transition-colors duration-300 w-full md:w-auto justify-center"
                         >
