@@ -26,7 +26,7 @@ function ProgressBar({ pct }: { pct: number }) {
 // Marquee strip of tools
 const toolsList = [
     'OpenCV', 'Gazebo', 'RViz', 'MoveIt', 'YOLOv8',
-    'ESP32', 'Arduino', 'Fusion 360', 'Streamlit', 'FastAPI',
+    'ESP32', 'Raspberry Pi', 'Arduino', 'Fusion 360', 'Streamlit', 'FastAPI',
     'Flask', 'React', 'NumPy', 'Pandas', 'PyTorch',
 ]
 

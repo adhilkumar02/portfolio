@@ -66,8 +66,8 @@ export function Hero() {
                             target="_blank"
                             className="group relative inline-flex items-center gap-2 text-neutral-300 hover:text-white font-semibold text-sm uppercase tracking-[0.12em] transition-colors duration-300 w-full md:w-auto justify-center"
                         >
-                            {/* underline draws in from left */}
-                            <span className="absolute bottom-0 left-0 h-px w-0 bg-white group-hover:w-full transition-all duration-400" />
+                            {/* underline draws in from left — only on hover-capable devices */}
+                            <span className="absolute bottom-0 left-0 h-px w-0 bg-white [@media(hover:hover)]:group-hover:w-full transition-all duration-300" />
                             <svg
                                 className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}

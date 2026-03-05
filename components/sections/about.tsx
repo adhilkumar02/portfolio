@@ -3,7 +3,7 @@
 export function About() {
     const skills = [
         "ROS2", "Computer Vision", "Python", "C++",
-        "Embedded Systems", "Deep Learning", "ESP32/Arduino", "Fusion 360"
+        "Embedded Systems", "Deep Learning", "ESP32/Arduino", "Raspberry Pi", "Fusion 360"
     ]
 
     const focusAreas = [
