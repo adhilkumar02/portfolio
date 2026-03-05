@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Orbitron, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Adhil Kumar | AI & Robotics Enthusiast",
@@ -18,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased bg-black text-white`} suppressHydrationWarning>
+      <body
+        className={`${spaceGrotesk.variable} ${orbitron.variable} ${spaceGrotesk.className} antialiased bg-black text-white`}
+        suppressHydrationWarning
+      >
         <Navbar />
         {children}
       </body>
